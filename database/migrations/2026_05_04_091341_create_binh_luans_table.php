@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('noi_dung',200);
             $table->integer('so_luot_thich');
             $table->integer('trang_thai')->default(0)->comment('0:Hiển thị, 1:Tạm ẩn');
-            $table->dateTime('ngay_tao');
             $table->timestamps();
         });
     }

@@ -22,8 +22,7 @@ return new class extends Migration
             $table->dateTime('ngay_bat_dau');
             $table->dateTime('ngay_ket_thuc');
             $table->integer('trang_thai')->default(0)->comment('0:Đang hoạt động, 1:Hết hạn');
-            $table->dateTime('ngay_tao')
-            ;
+
             $table->timestamps();
         });
     }

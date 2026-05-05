@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('thu_nhap_nhahangs', function (Blueprint $table) {
+        Schema::create('thu_nhap_nha_hangs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_nha_hang');
             $table->unsignedBigInteger('id_don_hang');
@@ -19,8 +19,7 @@ return new class extends Migration
             $table->integer('phi_hoa_hong');
             $table->integer('thu_nhap_rong');
             $table->integer('trang_thai');
-            $table->datetimes('ngay_thanh_toan');
-            $table->dateTime('ngay_tao');
+            $table->dateTime('ngay_thanh_toan');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('thu_nhap_nhahangs');
+        Schema::dropIfExists('thu_nhap_nha_hangs');
     }
 };

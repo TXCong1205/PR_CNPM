@@ -14,7 +14,6 @@ class BinhLuan extends Model
         'loai_doi_tuong',
         'noi_dung',
         'so_luot_thich',
-        'trang_thai',
-        'ngay_tao'
+        'trang_thai'
     ];
 }

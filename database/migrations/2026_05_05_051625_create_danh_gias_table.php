@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('danh_gias', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_don_hang');
+              $table->unsignedBigInteger('id_don_hang');
             $table->unsignedBigInteger('id_khach_hang');
             $table->unsignedBigInteger('id_nha_hang');
             $table->unsignedBigInteger('id_shipper');
@@ -23,9 +23,7 @@ return new class extends Migration
             $table->string('nhan_xet_do_an',150)    ->nullable();
             $table->string('nhan_xet_shipper',200)  ->nullable();
             $table->string('anh_danh_gia',255)  ->nullable();
-            $table->integer('trang_thai')->default(0)->comment("0: Hiển thị","1:Tạm ẩn");
-            $table->datetimes('ngay_tao');
-            $table->dateTime('ngay_cap_nhat');
+            $table->integer('trang_thai')->default(0)->comment("0: Hiển thị, 1:Tạm ẩn");
             $table->timestamps();
         });
     }

@@ -24,7 +24,6 @@ return new class extends Migration
             $table->integer('gioi_han_moi_nguoi');
             $table->dateTime('ngay_bat_dau');
             $table->integer('trang_thai')->default(0)->comment('0:Còn hiệu lực, 1: Hết hiệu lực');
-            $table->dateTime('ngay_tao');
             $table->integer('da_du_dung')->comment('0:Chưa sử dụng, 1: Đã sử dụng');
             $table->timestamps();
         });

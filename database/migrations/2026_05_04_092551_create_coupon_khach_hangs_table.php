@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_coupon');
             $table->integer('so_lan_da_dung');
             $table->string('lan_cuoi_su_dung');
-            $table->dateTime('ngay_tao');
             $table->timestamps();
         });
     }
