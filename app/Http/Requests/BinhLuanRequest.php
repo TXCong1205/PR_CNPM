@@ -24,7 +24,7 @@ class BinhLuanRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_nguoi_dung'     => 'required|integer|exists:nguoi_dungs,id',
+            'id_nguoi_dung'     => 'required|integer',
             'id_doi_tuong'      => 'required|integer',
             'id_binh_luan_cha'  => 'nullable|integer',
             'loai_doi_tuong'    => 'string|max:100',

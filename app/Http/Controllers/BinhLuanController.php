@@ -52,7 +52,35 @@ class BinhLuanController extends Controller
             'message'   => 'Cập nhật bình luận thành công'
         ], 200);
     }
-    public function deleteBinhLuan(Request $request,$id){
-
+    public function deleteBinhLuan(Request $request, $id)
+    {
+        $binhLuan = BinhLuan::find($id);
+        if (!$binhLuan) {
+            return response()->json([
+                'status' => 0,
+                'message' => 'Không tìm hấy đánh giá',
+            ], 404);
+        }
+        $binhLuan->delete();
+        return response()->json([
+            'status' => 1,
+            'message' => 'Xóa thành công',
+        ], 200);
+    }
+    public function changesStatus(Request $request)
+    {
+        $binhLuan = BinhLuan::find($request->id);
+        if (!$binhLuan) {
+            return response()->json([
+                'status' => 0,
+                'message' => 'Không tìm thấy đánh giá'
+            ], 404);
+        }
+        $binhLuan->trang_thai = $request->trang_thai;
+        $binhLuan->save();
+        return response()->json([
+            'status' => 1,
+            'message' => 'Cập nhật trạng thái thành công'
+        ], 200);
     }
 }
