@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ThuNhapNhaHang extends Model
 {
-    protected $table = 'thu_nhap_nhahangs';
+    protected $table = 'thu_nhap_nha_hangs';
     protected $fillable = [
         'id_nha_hang',
         'id_don_hang',
@@ -15,6 +15,5 @@ class ThuNhapNhaHang extends Model
         'thu_nhap_rong',
         'trang_thai',
         'ngay_thanh_toan',
-        'ngay_tao'
     ];
 }

@@ -27,7 +27,7 @@ class BinhLuanRequest extends FormRequest
             'id_nguoi_dung'     => 'required|integer',
             'id_doi_tuong'      => 'required|integer',
             'id_binh_luan_cha'  => 'nullable|integer',
-            'loai_doi_tuong'    => 'string|max:100',
+            'loai_doi_tuong'    => 'integer|in:0,1,2',
             'noi_dung'          => 'string|max:200',
             'so_luot_thich'     => 'integer',
             'trang_thai'        => 'integer|in:0,1,2'

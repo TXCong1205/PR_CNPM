@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\NguoiDung;
 use App\Models\User;
 
 return [
@@ -42,6 +43,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'nguoi_dung'    => [
+            'driver'    => 'session',
+            'provider'  => 'nguoi_dung',
+        ]
     ],
 
     /*
@@ -66,7 +71,10 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', User::class),
         ],
-
+        'nguoi_dung' => [
+            'driver' => 'eloquent',
+            'model'  =>  NguoiDung::class,
+        ]
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

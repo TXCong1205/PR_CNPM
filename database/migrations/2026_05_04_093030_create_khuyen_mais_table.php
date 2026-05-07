@@ -14,15 +14,14 @@ return new class extends Migration
         Schema::create('khuyen_mais', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_nha_hang');
-            $table->string('tieu_de',100);
-            $table->string('mo_ta',100);
-            $table->string('anh_banner',255);
-            $table->string('loai_khuyen_mai',255);
-            $table->integer('phan_tram_giam');
+            $table->string('ten_khuyen_mai', 100);
+            $table->string('mo_ta', 100);
+            $table->integer('kieu_giam')->default(0)->comment('');
+            $table->integer('so_tien_giam');
+            $table->integer('dieu_kien_toi_thieu');
             $table->dateTime('ngay_bat_dau');
             $table->dateTime('ngay_ket_thuc');
-            $table->integer('trang_thai')->default(0)->comment('0:Đang hoạt động, 1:Hết hạn');
-
+            $table->tinyInteger('trang_thai')->default(0)->comment('0:Đang hoạt động, 1:Hết hạn');
             $table->timestamps();
         });
     }

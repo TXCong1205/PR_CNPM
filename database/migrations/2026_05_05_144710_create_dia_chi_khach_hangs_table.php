@@ -14,12 +14,11 @@ return new class extends Migration
         Schema::create('dia_chi_khach_hangs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_khach_hang');
-            $table->string('nhan');
-            $table->string('dia_chi_day_du');
+            $table->string('ten_dia_chi');
+            $table->string('dia_chi');
             $table->string('vi_do')->nullable();
             $table->string('kinh_do')->nullable();
-            $table->boolean('la_mac_dinh')->default(false);
-            $table->dateTime('ngay_tao')->useCurrent();
+            $table->string('so_dien_thoai');
             $table->timestamps();
         });
     }

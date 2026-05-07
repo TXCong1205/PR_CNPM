@@ -6,17 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class KhuyenMai extends Model
 {
-    protected $table='khuyen_mais';
+    protected $table = 'khuyen_mais';
     protected $fillable = [
         'id_nha_hang',
-        'tieu_de',
+        'ten_khuyen_mai',
         'mo_ta',
-        'anh_banner',
-        'loai_khuyen_mai',
-        'phan_tram_giam',
+        'kieu_giam',
+        'so_tien_giam',
+        'dieu_kien_toi_thieu',
         'ngay_bat_dau',
         'ngay_ket_thuc',
         'trang_thai',
-        'ngay_tao'
     ];
 }

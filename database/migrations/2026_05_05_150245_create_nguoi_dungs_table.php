@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('nguoi_dungs', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
-            $table->string('mat_khau');
+            $table->string('password');
             $table->string('so_dien_thoai', 20)->nullable()->unique();
             $table->string('ho_ten', 150);
             $table->string('anh_dai_dien', 500)->nullable();
-            $table->enum('vai_tro', ['khach_hang', 'shipper', 'quan_tri_vien'])->default('khach_hang');
-            $table->boolean('dang_hoat_dong')->default(true);
-            $table->dateTime('ngay_tao')->useCurrent();
+            $table->integer('vai_tro')->default(0)->comment('0:khach hang, 1:shipper, 2:quan tri vien');
+            $table->boolean('trang_thai')->default(0);
             $table->timestamps();
         });
     }

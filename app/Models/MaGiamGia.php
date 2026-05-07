@@ -18,8 +18,8 @@ class MaGiamGia extends Model
         'gioi_han_su_dung',
         'gioi_han_moi_nguoi',
         'ngay_bat_dau',
+        'ngay_ket_thuc',
         'trang_thai',
-        'ngay_tao',
         'da_du_dung'
     ];
 }

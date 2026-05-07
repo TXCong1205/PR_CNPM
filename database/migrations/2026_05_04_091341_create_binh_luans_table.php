@@ -16,9 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('id_nguoi_dung');
             $table->unsignedBigInteger('id_doi_tuong');
             $table->unsignedBigInteger('id_binh_luan_cha');
-            $table->string('loai_doi_tuong',100);
-            $table->string('noi_dung',200);
-            $table->integer('so_luot_thich');
+            $table->tinyInteger('loai_doi_tuong')->comment('0: món ăn, 1: nhà hàng, 2: đơn hàng');
+            $table->string('noi_dung', 200);
+            $table->integer('so_luot_thich')->default(0);
             $table->integer('trang_thai')->default(0)->comment('0:Hiển thị, 1:Tạm ẩn');
             $table->timestamps();
         });

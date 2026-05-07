@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('doanh_thu_gop');
             $table->integer('phi_hoa_hong');
             $table->integer('thu_nhap_rong');
-            $table->integer('trang_thai');
+            $table->tinyInteger('trang_thai');
             $table->dateTime('ngay_thanh_toan');
             $table->timestamps();
         });
